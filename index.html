@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>exmaple project</title>
-</head>
-<body>
-<?php
-echo "welcome to project";
-?>
+var express = require('express');
+var app = express();
 
-</body>
-</html>
+app.get('/', function (req, res)
+{
+  res.send('hello');
+});
+
+app.listen(process.env.PORT || 3000);
